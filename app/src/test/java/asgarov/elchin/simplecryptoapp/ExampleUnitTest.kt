@@ -1,4 +1,4 @@
-package asgarov.elchin.simplecrpytoapp
+package asgarov.elchin.simplecryptoapp
 
 import org.junit.Test
 

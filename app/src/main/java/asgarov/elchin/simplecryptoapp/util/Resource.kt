@@ -1,4 +1,4 @@
-package asgarov.elchin.simplecrpytoapp.util
+package asgarov.elchin.simplecryptoapp.util
 
 sealed class Resource<T>(val data: T? = null, val message:String? = null) {
     class Success<T>(data: T) : Resource<T>(data = data)

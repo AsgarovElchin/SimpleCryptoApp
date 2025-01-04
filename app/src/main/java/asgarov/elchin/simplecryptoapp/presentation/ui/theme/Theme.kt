@@ -1,4 +1,4 @@
-package asgarov.elchin.simplecrpytoapp.presentation.ui.theme
+package asgarov.elchin.simplecryptoapp.presentation.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

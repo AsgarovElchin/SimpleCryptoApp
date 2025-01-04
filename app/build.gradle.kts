@@ -39,11 +39,8 @@ android {
             }
 
             val apiKey = localProperties.getProperty("API_KEY") ?: "default_key"
-
-            buildConfigField("String", "API_KEY", "\"$apiKey\"")
+            buildConfigField("String", "API_KEY", "\"${apiKey.replace("\"", "\\\"")}\"")
         }
-
-
     }
 
 
@@ -56,6 +53,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 

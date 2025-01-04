@@ -1,4 +1,4 @@
-package asgarov.elchin.simplecrpytoapp.util
+package asgarov.elchin.simplecryptoapp.util
 
 object Constants {
 
