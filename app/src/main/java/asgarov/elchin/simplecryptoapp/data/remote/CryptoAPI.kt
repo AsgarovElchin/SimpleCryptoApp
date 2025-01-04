@@ -7,7 +7,6 @@ import retrofit2.http.GET
 import retrofit2.http.Header
 
 interface CryptoAPI {
-
     @GET("/economy/cripto")
     suspend fun getCrypto(
         @Header("content-type") type:String = Constants.CONTENT_TYPE,
