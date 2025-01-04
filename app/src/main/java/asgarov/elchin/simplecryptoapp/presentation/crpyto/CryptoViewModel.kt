@@ -24,6 +24,7 @@ class CryptoViewModel @Inject constructor(
         getCrypto()
     }
 
+
     private var job:Job? = null
 
 

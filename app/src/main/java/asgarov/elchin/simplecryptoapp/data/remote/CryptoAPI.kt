@@ -1,5 +1,7 @@
 package asgarov.elchin.simplecryptoapp.data.remote
 
+
+
 import asgarov.elchin.simplecrpytoapp.BuildConfig
 import asgarov.elchin.simplecryptoapp.data.remote.dto.CryptoDto
 import asgarov.elchin.simplecryptoapp.util.Constants
@@ -11,5 +13,6 @@ interface CryptoAPI {
     suspend fun getCrypto(
         @Header("content-type") type:String = Constants.CONTENT_TYPE,
        @Header("authorization") auth:String = BuildConfig.API_KEY
+
     ):CryptoDto
 }
