@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -28,7 +31,22 @@ android {
                 "proguard-rules.pro"
             )
         }
+        debug {
+            val localProperties = Properties()
+            val localFile = rootProject.file("local.properties")
+            if (localFile.exists()) {
+                localProperties.load(FileInputStream(localFile))
+            }
+
+            val apiKey = localProperties.getProperty("API_KEY") ?: "default_key"
+
+            buildConfigField("String", "API_KEY", "\"$apiKey\"")
+        }
+
+
     }
+
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
