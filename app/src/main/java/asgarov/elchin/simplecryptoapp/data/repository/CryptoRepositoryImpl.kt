@@ -10,6 +10,16 @@ class CryptoRepositoryImpl @Inject constructor(
     private val cryptoAPI: CryptoAPI
 ):CryptoRepository {
     override suspend fun getCrypto(): List<Crypto> {
-        return cryptoAPI.getCrypto().toCrypto()
+
+        val cryptoDto = cryptoAPI.getCrypto()
+
+        if(cryptoDto.success){
+            return cryptoDto.toCrypto()
+        }
+        else{
+            throw Exception("API call failed: success = false")
+        }
+
+
     }
 }

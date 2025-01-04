@@ -8,9 +8,11 @@ fun CryptoDto.toCrypto():List<Crypto>{
         Crypto(
             code = it.code,
             currency = it.currency,
-            pricestr = it.pricestr
+            pricestr = it.pricestr,
         )
+
     }
+
 
 }
 
